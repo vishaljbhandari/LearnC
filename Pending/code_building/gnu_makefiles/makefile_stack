@@ -1,0 +1,12 @@
+CC=g++
+CFLAGS=-g -Wall
+TARGET=stack
+all: $(TARGET)
+$(TARGET): src/stack_app.cc src/stack.cc src/node.cc
+	$(CC) $(CFLAGS) -o $(TARGET) src/stack_app.cc src/stack.cc src/node.cc -I.
+clean:
+	$(RM) $(TARGET)
+
+
+# Single Line g++ command
+# g++ -g -Wall -o stack src/stack_app.cc src/stack.cc src/node.cc -I.

@@ -1,0 +1,6 @@
+gcc -Wall -o y y.cpp -lm
+gcc -Wall -o x x.cpp
+gcc -Wall -Wextra -Werror -lm -o xyz xyz.cpp -lstdc++
+g++ -Wall -Wextra -Werror -lm -o xyz xyz.cpp
+
+

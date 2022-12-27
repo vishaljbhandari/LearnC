@@ -1,0 +1,6 @@
+
+FASTEST SORTING ALGORITHM
+
+Quicksort
+The time complexity of Quicksort is O(n log n) in the best case, O(n log n) in the average case, and O(n^2) in the worst case.
+But because it has the best performance in the average case for most inputs, Quicksort is generally considered the “fastest” sorting algorithm

@@ -1,0 +1,16 @@
+1.1. What is libstdc++?
+The GNU Standard C++ Library v3 is an ongoing project to implement the ISO 14882 C++ Standard Library
+
+as described in clauses 20 through 33 and annex D (prior to the 2017 standard the library clauses started with 17). For those who want to see exactly how far the project has come, or just want the latest bleeding-edge code, the up-to-date source can be cloned via Git.
+
+The library is called libstdc++ not stdlibc++.
+
+1.2. Why should I use libstdc++?
+The completion of the initial ISO C++ standardization effort gave the C++ community a powerful set of reuseable tools in the form of the C++ Standard Library. However, for several years C++ implementations were (as the Draft Standard used to say) “incomplet and incorrekt”, and many suffered from limitations of the compilers that used them.
+
+The GNU compiler collection (gcc, g++, etc) is widely considered to be one of the leading compilers in the world. Its development is overseen by the GCC team. All of the rapid development and near-legendary portability that are the hallmarks of an open-source project are applied to libstdc++.
+
+All of the standard classes and functions from C++98/C++03, C++11 and C++14 (such as string, vector<>, iostreams, algorithms etc.) are freely available and attempt to be fully compliant. Work is ongoing to complete support for the current revision of the ISO C++ Standard.
+
+1.3. Who's in charge of it?
+The libstdc++ project is contributed to by several developers all over the world, in the same way as GCC or the Linux kernel.

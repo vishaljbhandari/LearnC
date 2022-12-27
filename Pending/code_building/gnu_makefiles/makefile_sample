@@ -1,0 +1,8 @@
+CC=g++
+CFLAGS=-g -Wall
+TARGET=sample
+all: $(TARGET)
+$(TARGET): src/sample.cc
+	$(CC) $(CFLAGS) -o $(TARGET) src/sample.cc -I.
+clean:
+	$(RM) $(TARGET)

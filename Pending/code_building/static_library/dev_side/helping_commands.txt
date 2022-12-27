@@ -1,0 +1,2 @@
+To read 
+strings static_library.a

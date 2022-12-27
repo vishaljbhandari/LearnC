@@ -1,0 +1,12 @@
+Some of the best practices adapted by experienced object-oriented software developers. 
+General Designs, Tried & Tested, Reusable Practices and Solutions for addressing recurring problems
+Language Neutral - can be used in any language
+Highly Flexible - Can be modified in any way.
+Easily reused for redevelopment and reading
+
+It describes the problem, the solution, when to apply the solution, and its consequences. It also gives implementation hints and examples.
+
+---------------------------
+
+
+

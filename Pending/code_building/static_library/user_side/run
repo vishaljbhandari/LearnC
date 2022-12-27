@@ -1,0 +1,3 @@
+echo "Copy libraries to LIB directory first"
+
+gcc main.cc ./lib/libthird.a -o mybin

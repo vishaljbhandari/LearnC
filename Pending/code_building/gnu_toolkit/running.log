@@ -1,0 +1,93 @@
+# This is How It Was Compiled
+[dev@vbs CPP-GNUToolChain]$ chmod 755 *
+[dev@vbs CPP-GNUToolChain]$ ./run.sh
++++ mkdir -p m4
++++ touch AUTHORS COPYING ChangeLog INSTALL NEWS README
++++ aclocal
+/usr/share/aclocal/libmcrypt.m4:17: warning: underquoted definition of AM_PATH_LIBMCRYPT
+/usr/share/aclocal/libmcrypt.m4:17:   run info '(automake)Extending aclocal'
+/usr/share/aclocal/libmcrypt.m4:17:   or see http://sources.redhat.com/automake/automake.html#Extending-aclocal
++++ libtoolize --force --copy
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+libtoolize: Remember to add 'LT_INIT' to configure.ac.
+libtoolize: Consider adding '-I m4' to ACLOCAL_AMFLAGS in Makefile.am.
++++ autoheader
++++ automake --add-missing --copy
+configure.ac:2: installing `./install-sh'
+configure.ac:2: installing `./missing'
+Makefile.am: installing `./depcomp'
++++ autoconf
++++ '[' 0 '!=' 0 ']'
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking for g++... g++
+checking for C++ compiler default output file name... a.out
+checking whether the C++ compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables...
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++... gcc3
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+gmake  all-recursive
+gmake[1]: Entering directory `/home/dev/CPP-GNUToolChain'
+gmake[2]: Entering directory `/home/dev/CPP-GNUToolChain'
+g++ -DHAVE_CONFIG_H -I.     -g -O2 -MT main.o -MD -MP -MF .deps/main.Tpo -c -o main.o `test -f 'src/main.cc' || echo './'`src/main.cc
+mv -f .deps/main.Tpo .deps/main.Po
+g++  -g -O2   -o sample main.o
+gmake[2]: Leaving directory `/home/dev/CPP-GNUToolChain'
+gmake[1]: Leaving directory `/home/dev/CPP-GNUToolChain'
+[dev@vbs CPP-GNUToolChain]$ ls -ltr
+total 844
+-rwxr-xr-x 1 dev dev  35141 Mar  1 14:31 LICENSE
+-rwxr-xr-x 1 dev dev    275 Mar  1 14:31 configure.ac
+drwxr-xr-x 2 dev dev   4096 Mar  1 14:31 config
+-rwxr-xr-x 1 dev dev    283 Mar  1 14:31 bootstrap
+-rwxr-xr-x 1 dev dev     29 Mar  1 14:31 README.md
+-rwxr-xr-x 1 dev dev    136 Mar  1 14:31 Makefile.am
+drwxr-xr-x 2 dev dev   4096 Mar  1 14:31 data
+drwxr-xr-x 2 dev dev   4096 Mar  1 14:31 docs
+drwxr-xr-x 2 dev dev   4096 Mar  1 14:31 scripts
+-rwxr-xr-x 1 dev dev     33 Mar  1 14:31 run.sh
+drwxr-xr-x 2 dev dev   4096 Mar  1 14:31 migrations
+drwxr-xr-x 2 dev dev   4096 Mar  1 14:31 include
+drwxr-xr-x 2 dev dev   4096 Mar  1 14:31 test
+drwxr-xr-x 2 dev dev   4096 Mar  1 14:31 src
+-rw-rw-r-- 1 dev dev      0 Mar  1 14:39 README
+-rw-rw-r-- 1 dev dev      0 Mar  1 14:39 NEWS
+-rw-rw-r-- 1 dev dev      0 Mar  1 14:39 INSTALL
+-rw-rw-r-- 1 dev dev      0 Mar  1 14:39 ChangeLog
+-rw-rw-r-- 1 dev dev      0 Mar  1 14:39 COPYING
+-rw-rw-r-- 1 dev dev      0 Mar  1 14:39 AUTHORS
+-rw-rw-r-- 1 dev dev  34611 Mar  1 14:39 aclocal.m4
+-rw-r--r-- 1 dev dev 324089 Mar  1 14:39 ltmain.sh
+drwxrwxr-x 2 dev dev   4096 Mar  1 14:39 m4
+-rw-rw-r-- 1 dev dev    557 Mar  1 14:39 config.h.in
+drwxr-xr-x 2 dev dev   4096 Mar  1 14:39 autom4te.cache
+-rwxr-xr-x 1 dev dev  13663 Mar  1 14:39 install-sh
+-rwxr-xr-x 1 dev dev  11419 Mar  1 14:39 missing
+-rwxr-xr-x 1 dev dev  18615 Mar  1 14:39 depcomp
+-rw-rw-r-- 1 dev dev  26709 Mar  1 14:39 Makefile.in
+-rwxrwxr-x 1 dev dev 131960 Mar  1 14:39 configure
+-rwxrwxr-x 1 dev dev  33060 Mar  1 14:39 config.status
+-rw-rw-r-- 1 dev dev  26172 Mar  1 14:39 Makefile
+-rw-rw-r-- 1 dev dev    698 Mar  1 14:39 config.h
+-rw-rw-r-- 1 dev dev     23 Mar  1 14:39 stamp-h1
+-rw-rw-r-- 1 dev dev   7975 Mar  1 14:39 config.log
+-rw-rw-r-- 1 dev dev  58072 Mar  1 14:39 main.o
+-rwxrwxr-x 1 dev dev  40085 Mar  1 14:39 sample

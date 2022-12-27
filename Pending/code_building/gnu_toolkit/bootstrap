@@ -1,0 +1,13 @@
+set -x
+mkdir -p m4
+touch AUTHORS COPYING ChangeLog INSTALL NEWS README
+aclocal && \
+        libtoolize --force --copy && \
+        autoheader && \
+        automake --add-missing --copy && \
+        autoconf
+if [ $? != 0 ]
+then
+        echo Bootstrapping failed....
+        exit 1
+fi

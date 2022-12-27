@@ -1,0 +1,83 @@
+STL - Standard Template Library
+
+Provides fast/reusable containers and algorithms
+
+All components of STL are templates, Everything is based on template concepts.
+
+Core Components 
+---------------
+Container Classes	-> Represents DATA
+Algorithms	-> Represents OPERATION on data
+Iterators	-> Facilitate DATA between OPERATION
+
+Also includes classes for - Concurrency, Random Numbers, Regular Expressions, Utilities etc ..
+
+
+Why to use STL ?
+Quicker Development
+Reliable -> Already Implemenrated, Tried and Tested Code
+Portable
+Efficient
+Accurate
+Easy
+Fast
+Reusable
+Lower Maintenance Cost
+Readable Code
+
+
+
+Sequencial Containers (with their headers)
+Used for data structures that store objects of the same type in a linear/sequencial manner.
+-------------------------------
+array 			<array>
+list			<list>
+vector			<vector>
+deque			<deque>
+farward_list	<forward_list>
+
+Associative Containers (Values are associated with sorted keys), Sorted Data Structure, Faster Look up, These are Ordered Containers
+Associative containers provide sorted data structures that provide a fast lookup (O(log n) time) using keys.
+--------------------------------
+set, multiset	<set>
+map, multimap	<map>
+
+
+Unordered Associative Containers 
+provide unsorted data structures that can be accessed using a hash
+--------------------------------
+unordered_set, unordered_multiset		<unordered_set>
+unordered_map, unordered_multimap		<unordered_map>
+
+
+
+
+
+Common Functions Accross all containers
+---------------------------------------
+Default constructor
+Uniform Initialization Constructor -> allows the usage of a consistent syntax to initialize variables and objects ranging from primitive type to aggregates
+Copy Constructor
+Iterator Constructor -> constructor, that accepts iterator, using this we can initialize a container with iterator of another container
+size() function
+clear() function
+begin() function
+end() function
+default allocator -> Used to manage memory for the container
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

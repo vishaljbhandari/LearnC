@@ -1,0 +1,10 @@
+// the configured options and settings for Tutorial
+
+/*
+ * @BasicProject_VERSION_MAJOR@ will be suplied from cmake configurations
+ *
+ * BasicProject is project name specified in CMakeLists.txt
+*/
+
+#define VERSION_MAJOR @BasicProject_VERSION_MAJOR@
+#define VERSION_MINOR @BasicProject_VERSION_MINOR@

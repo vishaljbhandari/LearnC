@@ -1,0 +1,38 @@
+"libc++" C++ Standard Library
+-----------------------------
+libc++ is an implementation of the C++ standard library, targeting C++11, C++14 and above.
+All of the code in libc++ is dual licensed under the MIT license and the UIUC License (a BSD-like license).
+
+Features and Goals
+Correctness as defined by the C++11 standard.
+Fast execution.
+Minimal memory use.
+Fast compile times.
+ABI compatibility with gcc's libstdc++ for some low-level features such as exception objects, rtti and memory allocation.
+Extensive unit tests.
+Why a new C++ Standard Library for C++11?
+After its initial introduction, many people have asked "why start a new library instead of contributing to an existing library?" (like Apache's libstdcxx, GNU's libstdc++, STLport, etc). There are many contributing reasons, but some of the major ones are:
+
+From years of experience (including having implemented the standard library before), we've learned many things about implementing the standard containers which require ABI breakage and fundamental changes to how they are implemented. For example, it is generally accepted that building std::string using the "short string optimization" instead of using Copy On Write (COW) is a superior approach for multicore machines (particularly in C++11, which has rvalue references). Breaking ABI compatibility with old versions of the library was determined to be critical to achieving the performance goals of libc++.
+
+Mainline libstdc++ has switched to GPL3, a license which the developers of libc++ cannot use. libstdc++ 4.2 (the last GPL2 version) could be independently extended to support C++11, but this would be a fork of the codebase (which is often seen as worse for a project than starting a new independent one). Another problem with libstdc++ is that it is tightly integrated with G++ development, tending to be tied fairly closely to the matching version of G++.
+
+STLport and the Apache libstdcxx library are two other popular candidates, but both lack C++11 support. Our experience (and the experience of libstdc++ developers) is that adding support for C++11 (in particular rvalue references and move-only types) requires changes to almost every class and function, essentially amounting to a rewrite. Faced with a rewrite, we decided to start from scratch and evaluate every design decision from first principles based on experience.
+
+Further, both projects are apparently abandoned: STLport 5.2.1 was released in Oct'08, and STDCXX 4.2.1 in May'08.
+
+Platform Support
+libc++ is known to work on the following platforms, using g++ and clang. Note that functionality provided by <atomic> is only functional with clang.
+Mac OS X i386
+Mac OS X x86_64
+FreeBSD 10+ i386
+FreeBSD 10+ x86_64
+FreeBSD 10+ ARM
+Linux i386
+Linux x86_64
+
+Current Status
+libc++ is a 100% complete C++11 implementation on Apple's OS X.
+LLVM and Clang can self host in C++ and C++11 mode with libc++ on Linux.
+libc++ is also a 100% complete C++14 implementation.
+libc++'s C++17 implementation is not yet complete.
